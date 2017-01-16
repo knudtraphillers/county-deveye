@@ -1,0 +1,15 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                                                                  
+"features": [
+{ "type": "Feature", "properties": { "X": 34.783037, "y": -0.691382, "EVENT": "Kisii Enterpreneurship Summit", "EVENT_ID": 1, "LOCATION_NAME": "Kisii University", "IMG": "<img class='img-responsive img-rounded'  src='assets/images/kes.jpg'>"   }, "geometry": { "type": "Point", "coordinates": [ 34.783037, -0.691382 ] } },
+{ "type": "Feature", "properties": { "X": 34.784091, "y": -0.686831, "EVENT": "Education Day", "EVENT_ID": 2, "LOCATION_NAME": "Kisii School", "IMG": "<img class='img-responsive img-rounded'  src='assets/images/kisii.jpg'>" }, "geometry": { "type": "Point", "coordinates": [ 34.784091, -0.686831 ] } },
+{ "type": "Feature", "properties": { "X": 34.769073, "y": -0.676809, "EVENT": "Madaraka Day Celebrations", "EVENT_ID": 3, "LOCATION_NAME": "Gusii Stadium", "IMG": "<img class='img-responsive img-rounded'  src='assets/images/gusii.jpg'>" }, "geometry": { "type": "Point", "coordinates": [ 34.769073, -0.676809 ] } },
+{ "type": "Feature", "properties": { "X": 34.771150, "y": -0.670927, "EVENT": "Launch of Ambulances", "EVENT_ID": 4, "LOCATION_NAME": "Kisii General Hospital", "IMG": "<img class='img-responsive img-rounded'  src='assets/images/ambulance.jpg'>"  }, "geometry": { "type": "Point", "coordinates": [ 34.77115, -0.670927 ] } },
+{ "type": "Feature", "properties": { "X": 34.664576, "y": -0.747254, "EVENT": "Book Donation", "EVENT_ID": 5, "LOCATION_NAME": "Tabaka DEB Primary School", "IMG": "<img class='img-responsive img-rounded'  src='assets/images/tabaka.jpg'>" }, "geometry": { "type": "Point", "coordinates": [ 34.664576, -0.747254 ] } },
+{ "type": "Feature", "properties": { "X": 34.801703, "y": -0.575665, "EVENT": "BoreHole Launch", "EVENT_ID": 6, "LOCATION_NAME": "Marani", "IMG": "<img class='img-responsive img-rounded'  src='assets/images/marani.jpg'>" }, "geometry": { "type": "Point", "coordinates": [ 34.801703, -0.575665 ] } },
+{ "type": "Feature", "properties": { "X": 34.905329, "y": -0.871397, "EVENT": "Hospital Opening", "EVENT_ID": 7, "LOCATION_NAME": "Gesusu Ward", "IMG": "<img class='img-responsive img-rounded'  src='assets/images/gesusu.jpg'>" }, "geometry": { "type": "Point", "coordinates": [ 34.905329, -0.871397 ] } },
+{ "type": "Feature", "properties": { "X": 34.754922, "y": -0.920369, "EVENT": "Funds drive", "EVENT_ID": 8, "LOCATION_NAME": "Riokindo Boys High School", "IMG": "<img class='img-responsive img-rounded'  src='assets/images/riokindo.jpg'>"  }, "geometry": { "type": "Point", "coordinates": [ 34.754922, -0.920369 ] } }
+]
+}

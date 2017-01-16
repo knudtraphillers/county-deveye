@@ -1,0 +1,15 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                                                                  
+"features": [
+{ "type": "Feature", "properties": { "ID": "0", "project": "School", "Status": "Completed", "Location": "Keroka" }, "geometry": { "type": "Point", "coordinates": [ 34.886212838122539, -0.76508386889902 ] } },
+{ "type": "Feature", "properties": { "ID": "1", "project": "New Hospital", "Status": "Pending", "Location": "Keumbu" }, "geometry": { "type": "Point", "coordinates": [ 34.78529280713186, -0.721191892227675 ] } },
+{ "type": "Feature", "properties": { "ID": "2", "project": "Hospital", "Status": "Ongoing", "Location": "Suneka" }, "geometry": { "type": "Point", "coordinates": [ 34.696942265399905, -0.696020164106 ] } },
+{ "type": "Feature", "properties": { "ID": "3", "project": "Tarmac Road", "Status": "Just Launched", "Location": "Getumo" }, "geometry": { "type": "Point", "coordinates": [ 34.790240285222531, -0.833007414392063 ] } },
+{ "type": "Feature", "properties": { "ID": "4", "project": "Dispensary", "Status": "Ongoing", "Location": "Nyangusu" }, "geometry": { "type": "Point", "coordinates": [ 34.812983479489233, -0.899132840251993 ] } },
+{ "type": "Feature", "properties": { "ID": "5", "project": "Stadium", "Status": "Soon To complete", "Location": "Ndonyo" }, "geometry": { "type": "Point", "coordinates": [ 34.677410885004129, -0.966687365353706 ] } },
+{ "type": "Feature", "properties": { "ID": "6", "project": "School", "Status": "Yet To Start", "Location": "Gesusu" }, "geometry": { "type": "Point", "coordinates": [ 34.950528883360043, -0.902282033973931 ] } },
+{ "type": "Feature", "properties": { "ID": "7", "project": "Dam", "Status": "Completed", "Location": "Marani" }, "geometry": { "type": "Point", "coordinates": [ 34.807363032123938, -0.554255578528201 ] } }
+]
+}
