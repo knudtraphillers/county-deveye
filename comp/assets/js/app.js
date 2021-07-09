@@ -1356,8 +1356,7 @@ var baseLayers = {
 
   "Kartverket.no":Kartverket1,
   "Watercolor":Stamen_Watercolor,
-  "Flybilete": Esri_WorldImagery,
-  "Watercolor med stedsnavn": watercolor_placenames
+  "Flybilete": Esri_WorldImagery
 };
 
 var groupedOverlays = {
