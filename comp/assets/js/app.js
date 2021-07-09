@@ -1387,11 +1387,11 @@ var groupedOverlays = {
 	},
 
   "Map": {
-  "Course": courseLines,
-	"Area": area_polygon,
-	"Danger": dangerLines,
-	"K-markers":k_markers,
-	"H-CAT":route_h_catLines,
+  "Turistveg": courseLines,
+	"Verna område": area_polygon,
+	//"Danger": dangerLines,
+	//"K-markers":k_markers,
+	//"H-CAT":route_h_catLines,
 	"Markslag":AR50,
   "Stedsnavn":Kartverket3_stedsnavn
   },
