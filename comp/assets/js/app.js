@@ -254,26 +254,44 @@ var Esri_WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/
 });
 
 
-// var watercolor_placenames = L.layerGroup([
-//
-//   L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
-//     attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-//     subdomains: 'abcd',
-//     minZoom: 5,
-//     maxZoom: 14,
-//     ext: 'png'
-//   })
-// ,
-// L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.topo3.graatone?", {
-//     layers: 'Tekst,Stedsnavn',
-//     format: 'image/png',
-//     transparent: true,
-//     opacity: 0.99,
-// 	zIndex: 3,
-// 	version: '1.1.1',
-//     // attribution: "Kartverket.no"
-// })
-// ]);
+var watercolor_placenames = L.layerGroup([
+
+  L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    subdomains: 'abcd',
+    minZoom: 5,
+    maxZoom: 14,
+    ext: 'png'
+  })
+,
+L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.topo3.graatone?", {
+    layers: 'Tekst,Stedsnavn',
+    format: 'image/png',
+    transparent: true,
+    opacity: 0.99,
+	zIndex: 3,
+	version: '1.1.1',
+    // attribution: "Kartverket.no"
+})
+]);
+
+var imagery_placenames = L.layerGroup([
+
+L.tileLayer.wmts('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+  {
+    attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+  })
+,
+L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.topo3.graatone?", {
+    layers: 'Tekst,Stedsnavn',
+    format: 'image/png',
+    transparent: true,
+    opacity: 0.99,
+	zIndex: 3,
+	version: '1.1.1',
+    // attribution: "Kartverket.no"
+})
+]);
 
 
 // var print_overlay = L.layerGroup ([Kartverket2,ml_2,ml_4]);
