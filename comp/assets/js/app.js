@@ -478,7 +478,7 @@ var coverage_polygon = L.geoJson(null, {
     return {
       color: "black",
       weight: 0.5,
-      fill: true,
+      fill: false,
       fillColor: "#42bdff",
 	  opacity: 0.9,
       fillOpacity: 0.5,
