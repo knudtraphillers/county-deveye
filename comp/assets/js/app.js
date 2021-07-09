@@ -1354,7 +1354,7 @@ var groupedOverlays = {
 	},
 
   "Map": {
-    "Course": courseLines,
+  "Course": courseLines,
 	"Area": area_polygon,
 	"Danger": dangerLines,
 	"K-markers":k_markers,
