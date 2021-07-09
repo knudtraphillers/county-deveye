@@ -479,10 +479,10 @@ var coverage_polygon = L.geoJson(null, {
       color: "black",
       weight: 0.5,
       fill: false,
-      fillColor: "#42bdff",
-	  opacity: 0.9,
-      fillOpacity: 0.5,
-	  clickable: true
+      fillColor: "#000000",
+	  opacity: 1.0,
+      fillOpacity: 1.0,
+	  clickable: false
     };
   },
   onEachFeature: function (feature, layer) {
