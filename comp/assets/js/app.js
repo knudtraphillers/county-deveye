@@ -134,7 +134,7 @@ function syncSidebar() {
     if (map.hasLayer(course_poiLayer)) {
       // if (map.getBounds().contains(layer.getLatLng()))  /* XXX - denne gjer at berre dei som er innafor kartområdet vert med i lista
 		  {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="../resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + 
+        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="../resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' +
 		layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
@@ -142,7 +142,7 @@ function syncSidebar() {
   /* Loop through support_poi layer and add only features which are in the map bounds */
   support_poi.eachLayer(function (layer) {
     if (map.hasLayer(support_poiLayer)) {
-      // if (map.getBounds().contains(layer.getLatLng())) 
+      // if (map.getBounds().contains(layer.getLatLng()))
 	  {
         $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="../resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
@@ -151,7 +151,7 @@ function syncSidebar() {
   /* Loop through start_area_poi layer and add only features which are in the map bounds */
   start_area_poi.eachLayer(function (layer) {
     if (map.hasLayer(start_area_poiLayer)) {
-      // if (map.getBounds().contains(layer.getLatLng())) 
+      // if (map.getBounds().contains(layer.getLatLng()))
 	  {
         $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="../resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
@@ -160,7 +160,7 @@ function syncSidebar() {
     /* Loop through finish_area_poi layer and add only features which are in the map bounds */
    finish_area_poi.eachLayer(function (layer) {
     if (map.hasLayer(finish_area_poiLayer)) {
-      // if (map.getBounds().contains(layer.getLatLng())) 
+      // if (map.getBounds().contains(layer.getLatLng()))
 	  {
         $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="../resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
@@ -169,22 +169,22 @@ function syncSidebar() {
      /* Loop through d3_poi layer and add only features which are in the map bounds */
    d3_poi.eachLayer(function (layer) {
     if (map.hasLayer(d3_poiLayer)) {
-      // if (map.getBounds().contains(layer.getLatLng())) 
+      // if (map.getBounds().contains(layer.getLatLng()))
 	  {
         $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="../resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
-  }); 
+  });
     /* Loop through dangers_poi layer and add only features which are in the map bounds */
    dangers_poi.eachLayer(function (layer) {
     if (map.hasLayer(dangers_poiLayer)) {
-      // if (map.getBounds().contains(layer.getLatLng())) 
+      // if (map.getBounds().contains(layer.getLatLng()))
 	  {
         $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="../resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
-  }); 
-  
+  });
+
   /* Update list.js featureList */
   featureList = new List("features", {
     valueNames: ["feature-name"]
@@ -195,7 +195,7 @@ function syncSidebar() {
 }
 
 /* Basemap Layers */
-	
+
 // var mapquestUT_G = L.tileLayer("https://dntutnotilesprod.cloudapp.net/tilestache/ut_topo_light/{z}/{x}/{y}.jpg", {
   // maxZoom: 16,
   // minZoom: 1,
@@ -217,14 +217,6 @@ var Kartverket1 = L.tileLayer("https://opencache.statkart.no/gatekeeper/gk/gk.op
   attribution: 'Tiles <a href="https://www.kartverket.no/" target="_blank">Kartverket</a>' + '. Icons <a href="https://www.flaticon.com/" target="_blank">Flaticon</a>'
 });
 
-
-var NXTRI_MapBox = L.tileLayer("https://{s}.tiles.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.jpg?access_token=pk.eyJ1Ijoibm9yc2VtYW4iLCJhIjoiYjlHNG1oYyJ9.s8Rz8bK8IgA9GfzApWtjdA", {
-  maxZoom: 18,
-  subdomains: ["a", "b"],
-  zIndex: 1,
-  attribution: 'Tiles <a href="https://www.mapbox.com/" target="_blank">MapBox</a>"' + '. Icons <a href="https://www.flaticon.com/" target="_blank">Flaticon</a>'
-});
-
 var cartoLight = L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png", {
   maxZoom: 18,
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://cartodb.com/attributions">CartoDB</a>' + '. Icons <a href="https://www.flaticon.com/" target="_blank">Flaticon</a>'
@@ -243,58 +235,13 @@ var Kartverket2 = L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.topo3.
     // attribution: "Kartverket.no"
 });
 
-var ml_2 = L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.kartdata2?", {
-    layers: 'Vannflate,Elver,Arealdekkeflate',
+var AR50 = L.tileLayer.wms("https://wms.nibio.no/cgi-bin/ar50?", {
+    layers: 'Skogbonitet',
     format: 'image/png',
     transparent: true,
-	zIndex: 2,
-	opacity: 0.2,
+	  opacity: 0.2,
     version: '1.1.1',
-    // attribution: "Kartverket.no"
-});
-
-var KA_ar5_overlay = L.tileLayer.kartverket('topo2graatone', {
-    layers: 'Vannflate,Elver,Arealdekkeflate',
-	format: 'image/png',
-    transparent: true,
-});
-
-
-
-// var ml_3 = L.tileLayer.wms("https://wms.nibio.no/cgi-bin/ar50?", {
-    // layers: 'Skogbonitet',
-    // format: 'image/png',
-    // transparent: true,
-	// opacity: 0.2,
-    // version: '1.1.1',
-    // attribution: "www.nibio.no"
-// });
-
-// var ml_3 = L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.kartdata2?", {
-    // layers: 'Arealdekkeflate',
-    // format: 'image/png',
-    // transparent: true,
-	// opacity: 0.2,
-    // version: '1.1.1',
-    // attribution: "Kartverket.no"
-// });
-
-var ml_4 = L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.kartdata2?", {
-    layers: 'Tekst,Stedsnavn',
-    format: 'image/png',
-    transparent: true,
-    zIndex: 3,
-	version: '1.1.1',
-    // attribution: "Kartverket.no"
-});
-
-var ml_5 = L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.topo2?", {
-    layers: 'topo2_wms',
-    format: 'image/png',
-    transparent: true,
-	opacity: 1.0,
-    version: '1.1.1',
-    // attribution: "Kartverket.no"
+    attribution: "www.nibio.no"
 });
 
 var color_overlay = L.layerGroup([
@@ -308,7 +255,7 @@ L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.kartdata2?", {
     version: '1.1.1',
     // attribution: "Kartverket.no"
 })
-, 
+,
 L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.topo3.graatone?", {
     layers: 'Tekst,Stedsnavn',
     format: 'image/png',
@@ -327,7 +274,7 @@ L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.topo3.graatone?", {
 
 
 // Google Streetview
- 
+
 
  // var googleLayer = new L.Google('ROADMAP');
       // map.addLayer(googleLayer);
@@ -341,19 +288,19 @@ L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.topo3.graatone?", {
   // };
   // var panorama = new  google.maps.StreetViewPanorama(document.getElementById('pano'),panoramaOptions);
   // map.setStreetView(panorama);
-  
+
 //*****************************************************
 
 // Load KML //
 
 // var kmlLayer = new L.KML("../resources/data/knudhillers.kml", {async: true});
-                                                              
-         // kmlLayer.on("loaded", function(e) { 
+
+         // kmlLayer.on("loaded", function(e) {
             // map.fitBounds(e.target.getBounds());
          // });
-                                                
+
          // map.addLayer(kmlLayer);
-		 
+
 // function setupKML(map) {
     // //create the layer, do not feed it data
     // var KML = L.geoJson(null, {
@@ -365,7 +312,7 @@ L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.topo3.graatone?", {
       // clickable: false,
       // weight: 2
     // };
-  // },  
+  // },
     // });
 
     // //add the layer to the map
@@ -394,7 +341,7 @@ L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.topo3.graatone?", {
 // function update_ais_h() {
 // $.getJSON('https://dl.dropboxusercontent.com/u/43845668/ais/ais_hazard.json', function(data) {
     // var geojson = L.geoJson(data, {
-    
+
 	  // pointToLayer: function (feature, latlng) {
 		// return L.marker(latlng, {
       // icon: L.icon({
@@ -411,39 +358,39 @@ L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.topo3.graatone?", {
         // layer.bindPopup(feature.properties.ship_name +
 						// " -> " +
 						// feature.properties.destination +
-						// "<br>" + 
+						// "<br>" +
 						// "Fart = " +
 						// feature.properties.speed + " knob" +
-						// "<br>" + 
-						// "Type = " + 
+						// "<br>" +
+						// "Type = " +
 						// feature.properties.ship_type +
-						// "<br>" + 
-						// "Last = " + 
+						// "<br>" +
+						// "Last = " +
 						// feature.properties.cargo
-						
+
 						// );
       // }
 	// });
 	// if (!ais_h) {
              // geojson.addTo(map);
-             
+
 				// }
-   
-	
+
+
 	// setTimeout(update_ais_h, 20000);
-	
+
   // });
 
 // };
 // update_ais_h();
- 
+
 // ISS dynamic layer - start //
 
 
 // var myIcon = L.icon({
 		// iconUrl: "../resources/img/Norseman_sponsor_logo_2018.png",
-       // iconSize: [89, 33], 
- 
+       // iconSize: [89, 33],
+
 // });
 
 
@@ -461,7 +408,7 @@ L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.topo3.graatone?", {
     // });
 // }
 // update_position();
-  
+
 // ISS dynamic layer - stop //
 
 
@@ -498,7 +445,7 @@ var area_polygon = L.geoJson(null, {
   },
   onEachFeature: function (feature, layer) {
   layer.bindPopup(feature.properties.info);}
-		
+
  });
 $.getJSON("../resources/data/area_polygon.json", function (data) {
   area_polygon.addData(data);
@@ -519,10 +466,10 @@ var dangerLines = L.geoJson(null, {
 },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
-      var content = "<table class='table table-striped table-bordered table-condensed'>" + 
-	  "<tr><th>Name</th><td>" + feature.properties.title + "</td></tr>" + 
-		"<tr><th>Info</th><td>" + feature.properties.info + "</td></tr>" + 
-		// "<tr><th>Link</th><td><a class='url-break' href='" + feature.properties.link_high + 
+      var content = "<table class='table table-striped table-bordered table-condensed'>" +
+	  "<tr><th>Name</th><td>" + feature.properties.title + "</td></tr>" +
+		"<tr><th>Info</th><td>" + feature.properties.info + "</td></tr>" +
+		// "<tr><th>Link</th><td><a class='url-break' href='" + feature.properties.link_high +
 		// "' target='_blank'>3D profil for løypa (høg kvalitet)</a></td></tr>" +
 	  "<table>";
       layer.on({
@@ -531,12 +478,12 @@ var dangerLines = L.geoJson(null, {
           $("#feature-info").html(content);
           $("#featureModal").modal("show");
         }
-		
+
       });
     }
     layer.on({
       mouseover: function (e) {
-        
+
 		var layer = e.target;
         layer.setStyle({
           weight: 10,
@@ -563,7 +510,7 @@ var courseLines = L.geoJson(null, {
   style: function (feature) {
     if (feature.properties.paintrule == "1") {
       return {
-        color: "#00aaff", 
+        color: "#00aaff",
         weight: 3,
         opacity: 1.0
       };
@@ -603,16 +550,16 @@ var courseLines = L.geoJson(null, {
         opacity: 1.0
       };
     }
-	
+
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
-      var content = "<table class='table table-striped table-bordered table-condensed'>" + 
-	  	  	"<tr><th>Name</th><td>" + feature.properties.title + "</td></tr>" + 
+      var content = "<table class='table table-striped table-bordered table-condensed'>" +
+	  	  	"<tr><th>Name</th><td>" + feature.properties.title + "</td></tr>" +
 		"<tr><th>Info</th><td>" + feature.properties.info + "</td></tr>"
-		// + 
-	    // "<tr><th>Link</th><td><a class='url-break' href='" + feature.properties.link_low + 
-		// "' target='_blank'>3D profil for løypa (låg kvalitet)</a></td></tr>" + 
+		// +
+	    // "<tr><th>Link</th><td><a class='url-break' href='" + feature.properties.link_low +
+		// "' target='_blank'>3D profil for løypa (låg kvalitet)</a></td></tr>" +
 	  "<table>";
       layer.on({
         click: function (e) {
@@ -648,10 +595,10 @@ $.getJSON("../resources/data/course_line2.json", function (data) {
 
 var route_h_catLines = L.geoJson(null, {
   style: function (feature) {
-    
+
 	if (feature.properties.h_cat == "0") {
       return {
-        color: "#4daf4a", 
+        color: "#4daf4a",
         weight: 3,
         opacity: 1.0
       };
@@ -670,13 +617,13 @@ var route_h_catLines = L.geoJson(null, {
         opacity: 1.0
       };
     }
-    
+
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
-     var content = "<table class='table table-striped table-bordered table-condensed'>" + 
+     var content = "<table class='table table-striped table-bordered table-condensed'>" +
 	  "<tr><th>Height above mean sea level: </th><td>" + feature.properties.h_cat + " m" + "</td></tr>" +
-	  "<tr><th>Legend</th><td>" + '<img src="../resources/img/h_cat.png" alt="no picture" height="53" width="109">' + "</td></tr>" 
+	  "<tr><th>Legend</th><td>" + '<img src="../resources/img/h_cat.png" alt="no picture" height="53" width="109">' + "</td></tr>"
 	   "<table>";
 	 layer.on({
         click: function (e) {
@@ -689,7 +636,7 @@ var route_h_catLines = L.geoJson(null, {
     }
     layer.on({
       mouseover: function (e) {
-        
+
 		var layer = e.target;
         layer.setStyle({
           weight: 4,
@@ -729,7 +676,7 @@ var course_poi = L.geoJson(null, {
     return L.marker(latlng, {
       icon: L.icon({
         iconUrl: '../resources/img/sg' + feature.properties.icon_subgroup + '.png',
-	    iconSize: [feature.properties.icon_w, feature.properties.icon_h], 
+	    iconSize: [feature.properties.icon_w, feature.properties.icon_h],
         iconAnchor: [feature.properties.icon_w/ 2, feature.properties.icon_h / 2], // xxx - halvparten av iconsize for å sikre at ikonet plasserast rett over punkt
         popupAnchor: [0, -32] //
       }),
@@ -740,12 +687,12 @@ var course_poi = L.geoJson(null, {
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties.text_link) {
-   var content = "<table class='table table-striped table-bordered table-condensed'>" + 
-	  	  	"<tr><th>Name</th><td>" + feature.properties.keyword_search + "</td></tr>" + "<tr><th>Link</th><td><a class='url-break' href='" + feature.properties.text_link + "' target='_blank'>The www</a></td></tr>" 
-		 
-  + '<br>' + "<table>" + 
-	  '<br>'+ feature.properties.picture_link 
-	  	  
+   var content = "<table class='table table-striped table-bordered table-condensed'>" +
+	  	  	"<tr><th>Name</th><td>" + feature.properties.keyword_search + "</td></tr>" + "<tr><th>Link</th><td><a class='url-break' href='" + feature.properties.text_link + "' target='_blank'>The www</a></td></tr>"
+
+  + '<br>' + "<table>" +
+	  '<br>'+ feature.properties.picture_link
+
 	  ;
       layer.on({
         click: function (e) {
@@ -765,11 +712,11 @@ var course_poi = L.geoJson(null, {
       });
     }
 	else  if (feature.properties) {
-   var content = "<table class='table table-striped table-bordered table-condensed'>" + 
-	  	  	"<tr><th>Name</th><td>" + feature.properties.keyword_search + "</td></tr>" 
-  + '<br>' + "<table>" + 
-	  '<br>'+ feature.properties.picture_link 
-	  
+   var content = "<table class='table table-striped table-bordered table-condensed'>" +
+	  	  	"<tr><th>Name</th><td>" + feature.properties.keyword_search + "</td></tr>"
+  + '<br>' + "<table>" +
+	  '<br>'+ feature.properties.picture_link
+
 	  ;
       layer.on({
         click: function (e) {
@@ -788,7 +735,7 @@ var course_poi = L.geoJson(null, {
         lng: layer.feature.geometry.coordinates[0]
       });
     }
-	
+
   }
 });
 $.getJSON("../resources/data/course_poi.json", function (data) {
@@ -804,7 +751,7 @@ var finish_area_poi = L.geoJson(null, {
     return L.marker(latlng, {
       icon: L.icon({
         iconUrl: '../resources/img/sg' + feature.properties.icon_subgroup + '.png',
-        iconSize: [feature.properties.icon_w, feature.properties.icon_h], 
+        iconSize: [feature.properties.icon_w, feature.properties.icon_h],
          iconAnchor: [feature.properties.icon_w/ 2, feature.properties.icon_h / 2], // xxx - halvparten av iconsize for å sikre at ikonet plasserast rett over punkt
         popupAnchor: [0, -32] //
       }),
@@ -815,12 +762,12 @@ var finish_area_poi = L.geoJson(null, {
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties.text_link) {
-     var content = "<table class='table table-striped table-bordered table-condensed'>" + 
+     var content = "<table class='table table-striped table-bordered table-condensed'>" +
 	  	  	"<tr><th>Name</th><td>" + feature.properties.keyword_search + "</td></tr>" + "</td></tr>"+
-		"<tr><th>Link</th><td><a class='url-break' href='" + feature.properties.text_link + "' target='_blank'>The www</a></td></tr>" 
-  + '<br>' + "<table>" + 
-	  '<br>'+ feature.properties.picture_link 
-	    
+		"<tr><th>Link</th><td><a class='url-break' href='" + feature.properties.text_link + "' target='_blank'>The www</a></td></tr>"
+  + '<br>' + "<table>" +
+	  '<br>'+ feature.properties.picture_link
+
 	  ;
       layer.on({
         click: function (e) {
@@ -838,13 +785,13 @@ var finish_area_poi = L.geoJson(null, {
         lat: layer.feature.geometry.coordinates[1],
         lng: layer.feature.geometry.coordinates[0]
       });
-    }	
+    }
 else     if (feature.properties) {
-      var content = 
-	  "<table class='table table-striped table-bordered table-condensed'>" + 
-	  "<tr><th>Name</th><td>" + feature.properties.keyword_search + "</td></tr>" + 
-  + '<br>' + "<table>" + 
-	  '<br>'+ feature.properties.picture_link 
+      var content =
+	  "<table class='table table-striped table-bordered table-condensed'>" +
+	  "<tr><th>Name</th><td>" + feature.properties.keyword_search + "</td></tr>" +
+  + '<br>' + "<table>" +
+	  '<br>'+ feature.properties.picture_link
 	  ;
       layer.on({
         click: function (e) {
@@ -862,9 +809,9 @@ else     if (feature.properties) {
         lat: layer.feature.geometry.coordinates[1],
         lng: layer.feature.geometry.coordinates[0]
       });
-    }	
-	
-	
+    }
+
+
   }
 });
 $.getJSON("../resources/data/finish_area_poi.json", function (data) {
@@ -882,7 +829,7 @@ var start_area_poi = L.geoJson(null, {
     return L.marker(latlng, {
       icon: L.icon({
          iconUrl: '../resources/img/sg' + feature.properties.icon_subgroup + '.png',
-	    iconSize: [feature.properties.icon_w, feature.properties.icon_h], 
+	    iconSize: [feature.properties.icon_w, feature.properties.icon_h],
         iconAnchor: [feature.properties.icon_w/ 2, feature.properties.icon_h / 2], // xxx - halvparten av iconsize for å sikre at ikonet plasserast rett over punkt
         popupAnchor: [0, -32] //
       }),
@@ -893,12 +840,12 @@ var start_area_poi = L.geoJson(null, {
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties.text_link) {
-    var content = "<table class='table table-striped table-bordered table-condensed'>" + 
+    var content = "<table class='table table-striped table-bordered table-condensed'>" +
 	  	  	"<tr><th>Name</th><td>" + feature.properties.keyword_search + "</td></tr>" +
-		"<tr><th>Link</th><td><a class='url-break' href='" + feature.properties.text_link + "' target='_blank'>The www</a></td></tr>" 
-  + '<br>' + "<table>" + 
-	  '<br>'+ feature.properties.picture_link 
-	    
+		"<tr><th>Link</th><td><a class='url-break' href='" + feature.properties.text_link + "' target='_blank'>The www</a></td></tr>"
+  + '<br>' + "<table>" +
+	  '<br>'+ feature.properties.picture_link
+
 	  ;
       layer.on({
         click: function (e) {
@@ -918,14 +865,14 @@ var start_area_poi = L.geoJson(null, {
       });
     }
 	else if (feature.properties) {
-      var content = 
-	  "<table class='table table-striped table-bordered table-condensed'>" + 
-	  
-	  "<tr><th>Name</th><td>" + feature.properties.keyword_search + "</td></tr>" 
-	    + '<br>' + "<table>" + 
-	  '<br>'+ feature.properties.picture_link 
+      var content =
+	  "<table class='table table-striped table-bordered table-condensed'>" +
+
+	  "<tr><th>Name</th><td>" + feature.properties.keyword_search + "</td></tr>"
+	    + '<br>' + "<table>" +
+	  '<br>'+ feature.properties.picture_link
 	  ;
-	  
+
       layer.on({
         click: function (e) {
           $("#feature-title").html(feature.properties.keyword_search);
@@ -943,8 +890,8 @@ var start_area_poi = L.geoJson(null, {
         lng: layer.feature.geometry.coordinates[0]
       });
     }
-	
-	
+
+
   }
 });
 $.getJSON("../resources/data/start_area_poi.json", function (data) {
@@ -960,7 +907,7 @@ var support_poi = L.geoJson(null, {
     return L.marker(latlng, {
       icon: L.icon({
         iconUrl: '../resources/img/sg' + feature.properties.icon_subgroup + '.png',
-	    iconSize: [feature.properties.icon_w, feature.properties.icon_h], 
+	    iconSize: [feature.properties.icon_w, feature.properties.icon_h],
         iconAnchor: [feature.properties.icon_w/ 2, feature.properties.icon_h / 2],
         popupAnchor: [0, -36]
       }),
@@ -971,12 +918,12 @@ var support_poi = L.geoJson(null, {
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties.text_link) {
-    var content = "<table class='table table-striped table-bordered table-condensed'>" + 
+    var content = "<table class='table table-striped table-bordered table-condensed'>" +
 	  	  	"<tr><th>Name</th><td>" + feature.properties.keyword_search + "</td></tr>" + "</td></tr>"+
-		"<tr><th>Link</th><td><a class='url-break' href='" + feature.properties.text_link + "' target='_blank'>The www</a></td></tr>" 
-  + '<br>' + "<table>" + 
-	  '<br>'+ feature.properties.picture_link 
-	  
+		"<tr><th>Link</th><td><a class='url-break' href='" + feature.properties.text_link + "' target='_blank'>The www</a></td></tr>"
+  + '<br>' + "<table>" +
+	  '<br>'+ feature.properties.picture_link
+
 	  ;
       layer.on({
         click: function (e) {
@@ -996,11 +943,11 @@ var support_poi = L.geoJson(null, {
       });
     }
 	else   if (feature.properties) {
-    var content = "<table class='table table-striped table-bordered table-condensed'>" + 
+    var content = "<table class='table table-striped table-bordered table-condensed'>" +
 	  	  	"<tr><th>Name</th><td>" + feature.properties.keyword_search + "</td></tr>"
-				    + '<br>' + "<table>" + 
-	  '<br>'+ feature.properties.picture_link 
-	  
+				    + '<br>' + "<table>" +
+	  '<br>'+ feature.properties.picture_link
+
 	  ;
       layer.on({
         click: function (e) {
@@ -1019,8 +966,8 @@ var support_poi = L.geoJson(null, {
         lng: layer.feature.geometry.coordinates[0]
       });
     }
-	
-	
+
+
   }
 });
 $.getJSON("../resources/data/support_poi.json", function (data) {
@@ -1047,7 +994,7 @@ var d3_poi = L.geoJson(null, {
     return L.marker(latlng, {
       icon: L.icon({
          iconUrl: '../resources/img/sg' + feature.properties.icon_subgroup + '.png',
-	    iconSize: [feature.properties.icon_w, feature.properties.icon_h], 
+	    iconSize: [feature.properties.icon_w, feature.properties.icon_h],
          iconAnchor: [feature.properties.icon_w/ 2, feature.properties.icon_h / 2], // xxx - halvparten av iconsize for å sikre at ikonet plasserast rett over punkt
         popupAnchor: [0, -32] //
       }),
@@ -1058,13 +1005,13 @@ var d3_poi = L.geoJson(null, {
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
-   var content = "<table class='table table-striped table-bordered table-condensed'>" + 
+   var content = "<table class='table table-striped table-bordered table-condensed'>" +
 	  	  	"<tr><th>Name</th><td>" + feature.properties.keyword_search + "</td></tr>" + "</td></tr>"+
-		"<tr><th>Link</th><td><a class='url-break' href='" + feature.properties.text_link + "' target='_blank'>3D extravagante!</a></td></tr>" 
-		 
-	  + '<br>' + "<table>" + 
+		"<tr><th>Link</th><td><a class='url-break' href='" + feature.properties.text_link + "' target='_blank'>3D extravagante!</a></td></tr>"
+
+	  + '<br>' + "<table>" +
 	  '<br>'+ '<img src="../resources/pictures/Gaustatoppen_3d_medium.jpg" alt="no picture" height="200" width="440">'
-	  
+
 	  ;
       layer.on({
         click: function (e) {
@@ -1096,7 +1043,7 @@ var dangers_poi = L.geoJson(null, {
     return L.marker(latlng, {
       icon: L.icon({
          iconUrl: '../resources/img/sg' + feature.properties.icon_subgroup + '.png',
-	    iconSize: [feature.properties.icon_w, feature.properties.icon_h], 
+	    iconSize: [feature.properties.icon_w, feature.properties.icon_h],
         iconAnchor: [feature.properties.icon_w/ 2, feature.properties.icon_h / 2],// xxx - halvparten av iconsize for å sikre at ikonet plasserast rett over punkt
         popupAnchor: [0, -32] //
       }),
@@ -1107,12 +1054,12 @@ var dangers_poi = L.geoJson(null, {
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties.text_link) {
-   var content = "<table class='table table-striped table-bordered table-condensed'>" + 
+   var content = "<table class='table table-striped table-bordered table-condensed'>" +
 	  	  	"<tr><th>Name</th><td>" + feature.properties.keyword_search + "</td></tr>" + "</td></tr>"+
-		"<tr><th>Link</th><td><a class='url-break' href='" + feature.properties.text_link + "' target='_blank'>The www</a></td></tr>" 
-	  + '<br>' + "<table>" + 
-	  '<br>'+ feature.properties.picture_link 
-	  
+		"<tr><th>Link</th><td><a class='url-break' href='" + feature.properties.text_link + "' target='_blank'>The www</a></td></tr>"
+	  + '<br>' + "<table>" +
+	  '<br>'+ feature.properties.picture_link
+
 	  ;
       layer.on({
         click: function (e) {
@@ -1132,10 +1079,10 @@ var dangers_poi = L.geoJson(null, {
       });
     }
 	else  if (feature.properties) {
-   var content = "<table class='table table-striped table-bordered table-condensed'>" + 
-	  	  	"<tr><th>Name</th><td>" + feature.properties.keyword_search + "</td></tr>" 
-	    + '<br>' + "<table>" + 
-	  '<br>'+ feature.properties.picture_link 
+   var content = "<table class='table table-striped table-bordered table-condensed'>" +
+	  	  	"<tr><th>Name</th><td>" + feature.properties.keyword_search + "</td></tr>"
+	    + '<br>' + "<table>" +
+	  '<br>'+ feature.properties.picture_link
 	  ;
       layer.on({
         click: function (e) {
@@ -1154,7 +1101,7 @@ var dangers_poi = L.geoJson(null, {
         lng: layer.feature.geometry.coordinates[0]
       });
     }
-	
+
   }
 });
 $.getJSON("../resources/data/dangers_poi.json", function (data) {
@@ -1170,7 +1117,7 @@ var k_markers = L.geoJson(null, {
     return L.marker(latlng, {
       icon: L.icon({
         iconUrl: "../resources/img/k_markers.png",
-        iconSize: [25, 25], 
+        iconSize: [25, 25],
         iconAnchor: [12, 12], // xxx - halvparten av iconsize for å sikre at ikonet plasserast rett over punkt
         popupAnchor: [0, 0] //
       })
@@ -1182,15 +1129,15 @@ var k_markers = L.geoJson(null, {
 	, { noHide: true });
   },
   // START - Dette er den vanlege popup boksen som man lyt klikke på close for å lukke
-  
+
    // onEachFeature: function (feature, layer) {
     // if (feature.properties) {
-      // var content = 
-	  // "<table class='table table-striped table-bordered table-condensed'>" + 
-	  // "<tr><th>Distanse</th><td>" + feature.properties.dist_akk + " km" + "</td></tr>" + 
+      // var content =
+	  // "<table class='table table-striped table-bordered table-condensed'>" +
+	  // "<tr><th>Distanse</th><td>" + feature.properties.dist_akk + " km" + "</td></tr>" +
 	  // "<tr><th>Distanse to go</th><td>" + feature.properties.dist_to_go + " km" +
-	  // "<tr><th>Climbed</th><td>" + feature.properties.s_akk_sum_h_up + " m" +  
-	  // "<tr><th>Climb to go</th><td>" + feature.properties.climb_to_go + " m" + 
+	  // "<tr><th>Climbed</th><td>" + feature.properties.s_akk_sum_h_up + " m" +
+	  // "<tr><th>Climb to go</th><td>" + feature.properties.climb_to_go + " m" +
 		// "<table>";
       // layer.on({
         // click: function (e) {
@@ -1209,11 +1156,11 @@ var k_markers = L.geoJson(null, {
           // // highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         // // }
       // // });
-           
+
     // }
   // }
   // STOPP - Dette er den vanlege popup boksen som man lyt klikke på close for å lukke
-  
+
   // START - Denne vil gi ein boks som vert ståande på skjermen inntil man klikkar
   onEachFeature: function (feature, layer) {
 
@@ -1231,8 +1178,8 @@ var k_markers = L.geoJson(null, {
 
                 return myLayer;
             }
-		// STOP - Denne vil gi ein boks som vert ståande på skjermen inntil man klikkar	
-			
+		// STOP - Denne vil gi ein boks som vert ståande på skjermen inntil man klikkar
+
 });
 $.getJSON("../resources/data/k_markers.json", function (data) {
   k_markers.addData(data);
@@ -1247,10 +1194,10 @@ map = L.map("map", {
   // layers: [ml_1, ml_2,markerClusters, highlight],
   zoomControl: false,
   attributionControl: true,
- 
+
 });
 
-	 
+
 /* Layer control listeners that allow for a single markerClusters layer */
 map.on("overlayadd", function(e) {
   if (e.layer === course_poiLayer) {
@@ -1381,10 +1328,8 @@ if (document.body.clientWidth <= 767) {
 }
 
 var baseLayers = {
-  
-  "Kartverket.no":Kartverket1,
-  "MapBox.com":NXTRI_MapBox,
-  "OSM CartoDB":cartoLight
+
+  "Kartverket.no":Kartverket1
 };
 
 var groupedOverlays = {
@@ -1403,8 +1348,7 @@ var groupedOverlays = {
 	"Danger": dangerLines,
 	"K-markers":k_markers,
 	"H-CAT":route_h_catLines,
-	"Kartverket Color":ml_2,
-	// "Kartverket2":KA_ar5_overlay,
+	"Markslag":AR50
   },
 };
 
@@ -1435,7 +1379,7 @@ $(document).one("ajaxStop", function () {
   $("#loading").hide();
   sizeLayerControl();
   /* Fit map to area_polygon bounds */
-  map.fitBounds(area_polygon.getBounds()); 
+  map.fitBounds(area_polygon.getBounds());
   featureList = new List("features", {valueNames: ["feature-name"]});
   featureList.sort("feature-name", {order:"asc"});
 
@@ -1468,7 +1412,7 @@ $(document).one("ajaxStop", function () {
     local: start_area_poiSearch,
     limit: 10
   });
-  
+
   var support_poiBH = new Bloodhound({
     name: "support_poi",
     datumTokenizer: function (d) {
@@ -1498,7 +1442,7 @@ $(document).one("ajaxStop", function () {
     local: dangers_poiSearch,
     limit: 10
   });
-  
+
   var geonamesBH = new Bloodhound({
     name: "GeoNames",
     datumTokenizer: function (d) {
@@ -1542,8 +1486,8 @@ $(document).one("ajaxStop", function () {
     minLength: 2,
     highlight: true,
     hint: false
-  }, 
- 
+  },
+
   {
     name: "course_poi",
     displayKey: "name",
@@ -1553,7 +1497,7 @@ $(document).one("ajaxStop", function () {
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;"].join(""))
     }
   },
-  
+
   {
     name: "start_area_poi",
     displayKey: "name",
@@ -1572,7 +1516,7 @@ $(document).one("ajaxStop", function () {
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;"].join(""))
     }
   },
- 
+
   {
     name: "finish_area_poi",
     displayKey: "name",
@@ -1590,7 +1534,7 @@ $(document).one("ajaxStop", function () {
       header: "<h4 class='typeahead-header'><img src='../resources/img/g6_d3.png' width='24' height='24'></h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;"].join(""))
     }
-  },  
+  },
   {
     name: "dangers_poi",
     displayKey: "name",
@@ -1599,7 +1543,7 @@ $(document).one("ajaxStop", function () {
       header: "<h4 class='typeahead-header'><img src='../resources/img/g4_dangers.png' width='24' height='24'></h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;"].join(""))
     }
-  },  
+  },
   {
     name: "GeoNames",
     displayKey: "name",
@@ -1656,7 +1600,7 @@ $(document).one("ajaxStop", function () {
         map._layers[datum.id].fire("click");
       }
     }
-	
+
 	if (datum.source === "dangers_poi") {
       if (!map.hasLayer(finish_area_poiLayer)) {
         map.addLayer(dangers_poiLayer);
@@ -1666,8 +1610,8 @@ $(document).one("ajaxStop", function () {
         map._layers[datum.id].fire("click");
       }
     }
-	
-	
+
+
     if (datum.source === "GeoNames") {
       map.setView([datum.lat, datum.lng], 14);
     }
