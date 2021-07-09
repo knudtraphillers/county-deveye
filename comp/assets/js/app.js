@@ -67,7 +67,7 @@ $("#about-btn").click(function() {
 });
 
 $("#full-extent-btn").click(function() {
-  map.fitBounds(area_polygon.getBounds());
+  map.fitBounds(coverage_polygon.getBounds());
   $(".navbar-collapse.in").collapse("hide");
   return false;
 });
