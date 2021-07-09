@@ -217,10 +217,6 @@ var Kartverket1 = L.tileLayer("https://opencache.statkart.no/gatekeeper/gk/gk.op
   attribution: 'Tiles <a href="https://www.kartverket.no/" target="_blank">Kartverket</a>' + '. Icons <a href="https://www.flaticon.com/" target="_blank">Flaticon</a>'
 });
 
-var cartoLight = L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png", {
-  maxZoom: 18,
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://cartodb.com/attributions">CartoDB</a>' + '. Icons <a href="https://www.flaticon.com/" target="_blank">Flaticon</a>'
-});
 
 // External wms-layers
 // https://openwms.statkart.no/skwms1/wms.topo3.graatone?request=GetCapabilities&Service=WMS
@@ -244,28 +240,28 @@ var AR50 = L.tileLayer.wms("https://wms.nibio.no/cgi-bin/ar50?", {
     attribution: "www.nibio.no"
 });
 
-var color_overlay = L.layerGroup([
-
-L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.kartdata2?", {
-    layers: 'Vannflate,Elver,Arealdekkeflate',
-    format: 'image/png',
-    transparent: true,
-	opacity: 0.2,
-	zIndex: 2,
-    version: '1.1.1',
-    // attribution: "Kartverket.no"
-})
-,
-L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.topo3.graatone?", {
-    layers: 'Tekst,Stedsnavn',
-    format: 'image/png',
-    transparent: true,
-    opacity: 0.99,
-	zIndex: 3,
-	version: '1.1.1',
-    // attribution: "Kartverket.no"
-})
-]);
+// var color_overlay = L.layerGroup([
+//
+// L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.kartdata2?", {
+//     layers: 'Vannflate,Elver,Arealdekkeflate',
+//     format: 'image/png',
+//     transparent: true,
+// 	opacity: 0.2,
+// 	zIndex: 2,
+//     version: '1.1.1',
+//     // attribution: "Kartverket.no"
+// })
+// ,
+// L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.topo3.graatone?", {
+//     layers: 'Tekst,Stedsnavn',
+//     format: 'image/png',
+//     transparent: true,
+//     opacity: 0.99,
+// 	zIndex: 3,
+// 	version: '1.1.1',
+//     // attribution: "Kartverket.no"
+// })
+// ]);
 
 
 
@@ -1189,7 +1185,7 @@ $.getJSON("../resources/data/k_markers.json", function (data) {
 map = L.map("map", {
   zoom: 12,
   center: [60.15, 7.77],
-  layers: [Kartverket1,markerClusters, highlight],
+  layers: [Kartverket1,markerClusters, highlight,Markslag],
   // layers: [mapquestKA2, kommune, markerClusters, highlight],
   // layers: [ml_1, ml_2,markerClusters, highlight],
   zoomControl: false,
