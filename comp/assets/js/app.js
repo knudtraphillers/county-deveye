@@ -505,7 +505,7 @@ var dangerLines = L.geoJson(null, {
 		// riseOnHover: true
       };
     }
-    
+
 },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
@@ -636,70 +636,70 @@ $.getJSON("../resources/data/course_line2.json", function (data) {
   map.addLayer(courseLines);
 });
 
-var route_h_catLines = L.geoJson(null, {
-  style: function (feature) {
-
-	if (feature.properties.h_cat == "0") {
-      return {
-        color: "#4daf4a",
-        weight: 3,
-        opacity: 1.0
-      };
-    }
-    if (feature.properties.h_cat == "500") {
-      return {
-        color: "#ff7f00",
-        weight: 3,
-        opacity: 1.0
-      };
-    }
-    if (feature.properties.h_cat == "1000") {
-      return {
-        color: "#ff2b00",
-        weight: 3,
-        opacity: 1.0
-      };
-    }
-
-  },
-  onEachFeature: function (feature, layer) {
-    if (feature.properties) {
-     var content = "<table class='table table-striped table-bordered table-condensed'>" +
-	  "<tr><th>Height above mean sea level: </th><td>" + feature.properties.h_cat + " m" + "</td></tr>" +
-	  "<tr><th>Legend</th><td>" + '<img src="../resources/img/h_cat.png" alt="no picture" height="53" width="109">' + "</td></tr>"
-	   "<table>";
-	 layer.on({
-        click: function (e) {
-          $("#feature-title").html(feature.properties.Line);
-          $("#feature-info").html(content);
-          $("#featureModal").modal("show");
-
-        }
-      });
-    }
-    layer.on({
-      mouseover: function (e) {
-
-		var layer = e.target;
-        layer.setStyle({
-          weight: 4,
-          color: "#000000",
-          opacity: 1
-        });
-        if (!L.Browser.ie && !L.Browser.opera) {
-          layer.bringToFront();
-        }
-      },
-      mouseout: function (e) {
-        courseLines.resetStyle(e.target);
-      }
-    });
-  }
-});
-$.getJSON("../resources/data/route_h_cat_ver1.json", function (data) {
-  route_h_catLines.addData(data);
-  // map.addLayer(route_h_catLines);
-});
+// var route_h_catLines = L.geoJson(null, {
+//   style: function (feature) {
+//
+// 	if (feature.properties.h_cat == "0") {
+//       return {
+//         color: "#4daf4a",
+//         weight: 3,
+//         opacity: 1.0
+//       };
+//     }
+//     if (feature.properties.h_cat == "500") {
+//       return {
+//         color: "#ff7f00",
+//         weight: 3,
+//         opacity: 1.0
+//       };
+//     }
+//     if (feature.properties.h_cat == "1000") {
+//       return {
+//         color: "#ff2b00",
+//         weight: 3,
+//         opacity: 1.0
+//       };
+//     }
+//
+//   },
+//   onEachFeature: function (feature, layer) {
+//     if (feature.properties) {
+//      var content = "<table class='table table-striped table-bordered table-condensed'>" +
+// 	  "<tr><th>Height above mean sea level: </th><td>" + feature.properties.h_cat + " m" + "</td></tr>" +
+// 	  "<tr><th>Legend</th><td>" + '<img src="../resources/img/h_cat.png" alt="no picture" height="53" width="109">' + "</td></tr>"
+// 	   "<table>";
+// 	 layer.on({
+//         click: function (e) {
+//           $("#feature-title").html(feature.properties.Line);
+//           $("#feature-info").html(content);
+//           $("#featureModal").modal("show");
+//
+//         }
+//       });
+//     }
+//     layer.on({
+//       mouseover: function (e) {
+//
+// 		var layer = e.target;
+//         layer.setStyle({
+//           weight: 4,
+//           color: "#000000",
+//           opacity: 1
+//         });
+//         if (!L.Browser.ie && !L.Browser.opera) {
+//           layer.bringToFront();
+//         }
+//       },
+//       mouseout: function (e) {
+//         courseLines.resetStyle(e.target);
+//       }
+//     });
+//   }
+// });
+// $.getJSON("../resources/data/route_h_cat_ver1.json", function (data) {
+//   route_h_catLines.addData(data);
+//   // map.addLayer(route_h_catLines);
+// });
 
 
 
@@ -1379,7 +1379,7 @@ var baseLayers = {
 
 var groupedOverlays = {
   "POI": {
-    "<img src='../resources/img/g1_course.png' width='32' height='32'>": course_poiLayer,
+  "<img src='../resources/img/g1_course.png' width='32' height='32'>": course_poiLayer,
 	"<img src='../resources/img/g2_start_area.png' width='32' height='32'>": start_area_poiLayer,
 	"<img src='../resources/img/g3_support.png' width='32' height='32'>": support_poiLayer,
 	"<img src='../resources/img/g4_dangers.png' width='32' height='32'>": dangers_poiLayer,
