@@ -240,6 +240,19 @@ var AR50 = L.tileLayer.wms("https://wms.nibio.no/cgi-bin/ar50?", {
     attribution: "www.nibio.no"
 });
 
+var Stamen_Watercolor = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+  attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  subdomains: 'abcd',
+  minZoom: 5,
+  maxZoom: 14,
+  ext: 'png'
+});
+
+var Esri_WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+  attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+});
+
+
 // var color_overlay = L.layerGroup([
 //
 // L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.kartdata2?", {
@@ -1325,7 +1338,9 @@ if (document.body.clientWidth <= 767) {
 
 var baseLayers = {
 
-  "Kartverket.no":Kartverket1
+  "Kartverket.no":Kartverket1,
+  "Watercolor":Stamen_Watercolor,
+  "Flybilete": Esri_WorldImagery
 };
 
 var groupedOverlays = {
