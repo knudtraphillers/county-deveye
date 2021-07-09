@@ -473,6 +473,22 @@ $.getJSON("../resources/data/area_polygon.json", function (data) {
   map.addLayer(area_polygon);
 });
 
+var coverage_polygon = L.geoJson(null, {
+  style: function (feature) {
+    return {
+      color: "black",
+      weight: 0.5,
+      fill: false,
+	  opacity: 1.0
+    };
+  }
+
+ });
+$.getJSON("../resources/data/coverage_polygon.json", function (data) {
+  // area_polygon.addData(data);
+  // map.addLayer(area_polygon);
+});
+
 var dangerLines = L.geoJson(null, {
   style: function (feature) {
  	 if (feature.properties.cbb_index = "Extreme danger") {
