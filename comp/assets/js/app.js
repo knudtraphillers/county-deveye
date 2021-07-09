@@ -505,6 +505,7 @@ var dangerLines = L.geoJson(null, {
 		// riseOnHover: true
       };
     }
+    
 },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
