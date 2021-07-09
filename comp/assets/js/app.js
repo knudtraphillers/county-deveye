@@ -253,15 +253,15 @@ var Esri_WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/
   attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 });
 
-var kartverket_stednavn = L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.topo3.graatone?", {
-    layers: 'Tekst,Stedsnavn',
-    format: 'image/png',
-    transparent: true,
-    opacity: 0.99,
-	zIndex: 3,
-	version: '1.1.1',
-  attribution: "Kartverket.no"
-});
+// var kartverket_stednavn = L.tileLayer.wms("https://openwms.statkart.no/skwms1/wms.topo3.graatone?", {
+//     layers: 'Tekst,Stedsnavn',
+//     format: 'image/png',
+//     transparent: true,
+//     opacity: 0.99,
+// 	zIndex: 3,
+// 	version: '1.1.1',
+//   attribution: "Kartverket.no"
+// });
 
 // var imagery_placenames = L.layerGroup([
 //
