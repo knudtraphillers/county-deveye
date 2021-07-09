@@ -485,8 +485,8 @@ var coverage_polygon = L.geoJson(null, {
 
  });
 $.getJSON("../resources/data/coverage_polygon.json", function (data) {
-  // area_polygon.addData(data);
-  // map.addLayer(area_polygon);
+  coverage_polygon.addData(data);
+  // map.addLayer(coverage_polygon);
 });
 
 var dangerLines = L.geoJson(null, {
