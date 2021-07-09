@@ -478,15 +478,20 @@ var coverage_polygon = L.geoJson(null, {
     return {
       color: "black",
       weight: 0.5,
-      fill: false,
-	  opacity: 1.0
+      fill: true,
+      fillColor: "#42bdff",
+	  opacity: 0.9,
+      fillOpacity: 0.5,
+	  clickable: true
     };
-  }
+  },
+  onEachFeature: function (feature, layer) {
+  layer.bindPopup(feature.properties.info);}
 
  });
 $.getJSON("../resources/data/coverage_polygon.json", function (data) {
   coverage_polygon.addData(data);
-  // map.addLayer(coverage_polygon);
+  map.addLayer(coverage_polygon);
 });
 
 var dangerLines = L.geoJson(null, {
