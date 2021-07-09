@@ -465,7 +465,7 @@ var area_polygon = L.geoJson(null, {
     };
   },
   onEachFeature: function (feature, layer) {
-  layer.bindPopup(feature.properties.info);}
+  layer.bindPopup(feature.properties.title,feature.properties.info);}
 
  });
 $.getJSON("../resources/data/area_polygon.json", function (data) {
