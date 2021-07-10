@@ -162,7 +162,7 @@ function syncSidebar() {
     if (map.hasLayer(finish_area_poiLayer)) {
       // if (map.getBounds().contains(layer.getLatLng()))
 	  {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
   });
