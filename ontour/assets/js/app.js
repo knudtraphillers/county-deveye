@@ -134,7 +134,7 @@ function syncSidebar() {
     if (map.hasLayer(course_poiLayer)) {
       // if (map.getBounds().contains(layer.getLatLng()))  /* XXX - denne gjer at berre dei som er innafor kartområdet vert med i lista
 		  {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="ontour/resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' +
+        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' +
 		layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
@@ -144,7 +144,7 @@ function syncSidebar() {
     if (map.hasLayer(support_poiLayer)) {
       // if (map.getBounds().contains(layer.getLatLng()))
 	  {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="ontour/resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
   });
@@ -153,7 +153,7 @@ function syncSidebar() {
     if (map.hasLayer(start_area_poiLayer)) {
       // if (map.getBounds().contains(layer.getLatLng()))
 	  {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="ontour/resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
   });
@@ -171,7 +171,7 @@ function syncSidebar() {
     if (map.hasLayer(d3_poiLayer)) {
       // if (map.getBounds().contains(layer.getLatLng()))
 	  {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="ontour/resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
   });
@@ -180,7 +180,7 @@ function syncSidebar() {
     if (map.hasLayer(dangers_poiLayer)) {
       // if (map.getBounds().contains(layer.getLatLng()))
 	  {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="ontour/resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
   });
@@ -314,7 +314,7 @@ var Esri_WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/
 
 // Load KML //
 
-// var kmlLayer = new L.KML("ontour/resources/data/knudhillers.kml", {async: true});
+// var kmlLayer = new L.KML("resources/data/knudhillers.kml", {async: true});
 
          // kmlLayer.on("loaded", function(e) {
             // map.fitBounds(e.target.getBounds());
@@ -366,7 +366,7 @@ var Esri_WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/
 	  // pointToLayer: function (feature, latlng) {
 		// return L.marker(latlng, {
       // icon: L.icon({
-        // iconUrl: "ontour/resources/img/ais_generell.png",
+        // iconUrl: "resources/img/ais_generell.png",
         // iconSize: [32, 28],
         // iconAnchor: [12, 28],
         // popupAnchor: [0, -25]
@@ -409,7 +409,7 @@ var Esri_WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/
 
 
 // var myIcon = L.icon({
-		// iconUrl: "ontour/resources/img/Norseman_sponsor_logo_2018.png",
+		// iconUrl: "resources/img/Norseman_sponsor_logo_2018.png",
        // iconSize: [89, 33],
 
 // });
@@ -435,7 +435,7 @@ var Esri_WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/
 
 // /* Overlay Layers - Static */
 
-// $.getJSON("ontour/resources/data/kommune.json", function (data) {
+// $.getJSON("resources/data/kommune.json", function (data) {
   // kommune.addData(data);
 // });
 
@@ -468,7 +468,7 @@ var area_polygon = L.geoJson(null, {
   layer.bindPopup(feature.properties.title);}
 
  });
-$.getJSON("ontour/resources/data/area_polygon.json", function (data) {
+$.getJSON("resources/data/area_polygon.json", function (data) {
   area_polygon.addData(data);
   map.addLayer(area_polygon);
 });
@@ -489,7 +489,7 @@ var coverage_polygon = L.geoJson(null, {
   layer.bindPopup(feature.properties.title);}
 
  });
-$.getJSON("ontour/resources/data/coverage_polygon.json", function (data) {
+$.getJSON("resources/data/coverage_polygon.json", function (data) {
   coverage_polygon.addData(data);
   map.addLayer(coverage_polygon);
 });
@@ -544,7 +544,7 @@ var dangerLines = L.geoJson(null, {
     });
   }
 });
-$.getJSON("ontour/resources/data/danger_line.json", function (data) {
+$.getJSON("resources/data/danger_line.json", function (data) {
   dangerLines.addData(data);
   map.addLayer(dangerLines);
 });
@@ -631,7 +631,7 @@ var courseLines = L.geoJson(null, {
     });
   }
 });
-$.getJSON("ontour/resources/data/course_line2.json", function (data) {
+$.getJSON("resources/data/course_line2.json", function (data) {
   courseLines.addData(data);
   map.addLayer(courseLines);
 });
@@ -666,7 +666,7 @@ $.getJSON("ontour/resources/data/course_line2.json", function (data) {
 //     if (feature.properties) {
 //      var content = "<table class='table table-striped table-bordered table-condensed'>" +
 // 	  "<tr><th>Height above mean sea level: </th><td>" + feature.properties.h_cat + " m" + "</td></tr>" +
-// 	  "<tr><th>Legend</th><td>" + '<img src="ontour/resources/img/h_cat.png" alt="no picture" height="53" width="109">' + "</td></tr>"
+// 	  "<tr><th>Legend</th><td>" + '<img src="resources/img/h_cat.png" alt="no picture" height="53" width="109">' + "</td></tr>"
 // 	   "<table>";
 // 	 layer.on({
 //         click: function (e) {
@@ -696,7 +696,7 @@ $.getJSON("ontour/resources/data/course_line2.json", function (data) {
 //     });
 //   }
 // });
-// $.getJSON("ontour/resources/data/route_h_cat_ver1.json", function (data) {
+// $.getJSON("resources/data/route_h_cat_ver1.json", function (data) {
 //   route_h_catLines.addData(data);
 //   // map.addLayer(route_h_catLines);
 // });
@@ -745,7 +745,7 @@ var course_poi = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="ontour/resources/img/g4_dangers.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/g4_dangers.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       course_poiSearch.push({
         name: layer.feature.properties.keyword_search,
         source: "course_poi",
@@ -769,7 +769,7 @@ var course_poi = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="ontour/resources/img/g4_dangers.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/g4_dangers.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       course_poiSearch.push({
         name: layer.feature.properties.keyword_search,
         source: "course_poi",
@@ -781,7 +781,7 @@ var course_poi = L.geoJson(null, {
 
   }
 });
-$.getJSON("ontour/resources/data/course_poi.json", function (data) {
+$.getJSON("resources/data/course_poi.json", function (data) {
   course_poi.addData(data);
   map.addLayer(course_poiLayer);
 });
@@ -820,7 +820,7 @@ var finish_area_poi = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="ontour/resources/img/g4_dangers.png"></td><td class="feature-name">' + layer.feature.properties.name + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/g4_dangers.png"></td><td class="feature-name">' + layer.feature.properties.name + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       finish_area_poiSearch.push({
         name: layer.feature.properties.keyword_search,
         source: "finish_area_poi",
@@ -844,7 +844,7 @@ else     if (feature.properties) {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="ontour/resources/img/g4_dangers.png"></td><td class="feature-name">' + layer.feature.properties.name + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/g4_dangers.png"></td><td class="feature-name">' + layer.feature.properties.name + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       finish_area_poiSearch.push({
         name: layer.feature.properties.keyword_search,
         source: "finish_area_poi",
@@ -857,7 +857,7 @@ else     if (feature.properties) {
 
   }
 });
-$.getJSON("ontour/resources/data/finish_area_poi.json", function (data) {
+$.getJSON("resources/data/finish_area_poi.json", function (data) {
   finish_area_poi.addData(data);
   map.addLayer(finish_area_poiLayer);
 });
@@ -898,7 +898,7 @@ var start_area_poi = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="ontour/resources/img/g4_dangers.png"></td><td class="feature-name">' + layer.feature.properties.name + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/g4_dangers.png"></td><td class="feature-name">' + layer.feature.properties.name + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       start_area_poiSearch.push({
         name: layer.feature.properties.keyword_search,
         source: "start_area_poi",
@@ -924,7 +924,7 @@ var start_area_poi = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="ontour/resources/img/g4_dangers.png"></td><td class="feature-name">' + layer.feature.properties.name + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/g4_dangers.png"></td><td class="feature-name">' + layer.feature.properties.name + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       start_area_poiSearch.push({
         name: layer.feature.properties.keyword_search,
         source: "start_area_poi",
@@ -937,7 +937,7 @@ var start_area_poi = L.geoJson(null, {
 
   }
 });
-$.getJSON("ontour/resources/data/start_area_poi.json", function (data) {
+$.getJSON("resources/data/start_area_poi.json", function (data) {
   start_area_poi.addData(data);
   map.addLayer(start_area_poiLayer);
 });
@@ -976,7 +976,7 @@ var support_poi = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="ontour/resources/img/g4_dangers.png"></td><td class="feature-name">' + layer.feature.properties.name + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/g4_dangers.png"></td><td class="feature-name">' + layer.feature.properties.name + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       support_poiSearch.push({
         name: layer.feature.properties.keyword_search,
         source: "support_poi",
@@ -1000,7 +1000,7 @@ var support_poi = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="ontour/resources/img/g4_dangers.png"></td><td class="feature-name">' + layer.feature.properties.name + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/g4_dangers.png"></td><td class="feature-name">' + layer.feature.properties.name + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       support_poiSearch.push({
         name: layer.feature.properties.keyword_search,
         source: "support_poi",
@@ -1013,7 +1013,7 @@ var support_poi = L.geoJson(null, {
 
   }
 });
-$.getJSON("ontour/resources/data/support_poi.json", function (data) {
+$.getJSON("resources/data/support_poi.json", function (data) {
   support_poi.addData(data);
   map.addLayer(support_poiLayer);
 });
@@ -1053,7 +1053,7 @@ var d3_poi = L.geoJson(null, {
 		"<tr><th>Link</th><td><a class='url-break' href='" + feature.properties.text_link + "' target='_blank'>3D extravagante!</a></td></tr>"
 
 	  + '<br>' + "<table>" +
-	  '<br>'+ '<img src="ontour/resources/pictures/Gaustatoppen_3d_medium.jpg" alt="no picture" height="200" width="440">'
+	  '<br>'+ '<img src="resources/pictures/Gaustatoppen_3d_medium.jpg" alt="no picture" height="200" width="440">'
 
 	  ;
       layer.on({
@@ -1064,7 +1064,7 @@ var d3_poi = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="ontour/resources/img/g6_d3.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/g6_d3.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       d3_poiSearch.push({
         name: layer.feature.properties.keyword_search,
         source: "d3_poi",
@@ -1075,7 +1075,7 @@ var d3_poi = L.geoJson(null, {
     }
   }
 });
-$.getJSON("ontour/resources/data/d3_poi.json", function (data) {
+$.getJSON("resources/data/d3_poi.json", function (data) {
   d3_poi.addData(data);
   map.addLayer(d3_poiLayer);
 });
@@ -1112,7 +1112,7 @@ var dangers_poi = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="ontour/resources/img/g4_dangers.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/g4_dangers.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       dangers_poiSearch.push({
         name: layer.feature.properties.keyword_search,
         source: "dangers_poi",
@@ -1135,7 +1135,7 @@ var dangers_poi = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="ontour/resources/img/g4_dangers.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/g4_dangers.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       dangers_poiSearch.push({
         name: layer.feature.properties.keyword_search,
         source: "dangers_poi",
@@ -1147,7 +1147,7 @@ var dangers_poi = L.geoJson(null, {
 
   }
 });
-$.getJSON("ontour/resources/data/dangers_poi.json", function (data) {
+$.getJSON("resources/data/dangers_poi.json", function (data) {
   dangers_poi.addData(data);
   map.addLayer(dangers_poiLayer);
 });
@@ -1159,7 +1159,7 @@ var k_markers = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: "ontour/resources/img/k_markers.png",
+        iconUrl: "resources/img/k_markers.png",
         iconSize: [25, 25],
         iconAnchor: [12, 12], // xxx - halvparten av iconsize for å sikre at ikonet plasserast rett over punkt
         popupAnchor: [0, 0] //
@@ -1215,7 +1215,7 @@ var k_markers = L.geoJson(null, {
                         '<b>Distance to go:</b> ' + feature.properties.dist_to_go + ' km' + '<br >' +
                         '<b>Climbed:</b> ' + feature.properties.s_akk_sum_h_up + ' m' +'<br >' +
                         '<b>Climb to go:</b> ' + feature.properties.climb_to_go + ' m');
-						// + '<br >'+ '<br >' + '<img src="ontour/resources/img/k_markers.png" alt="Smiley face" height="42" width="42">' );
+						// + '<br >'+ '<br >' + '<img src="resources/img/k_markers.png" alt="Smiley face" height="42" width="42">' );
                 // Denne vil gi deg moglegheit for å vise eit bilete!!
 				}
 
@@ -1224,7 +1224,7 @@ var k_markers = L.geoJson(null, {
 		// STOP - Denne vil gi ein boks som vert ståande på skjermen inntil man klikkar
 
 });
-$.getJSON("ontour/resources/data/k_markers.json", function (data) {
+$.getJSON("resources/data/k_markers.json", function (data) {
   k_markers.addData(data);
   map.addLayer(k_markersLayer);
 });
