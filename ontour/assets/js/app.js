@@ -718,7 +718,7 @@ var course_poi = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: 'ontour/resources/img/sg' + feature.properties.icon_subgroup + '.png',
+        iconUrl: 'resources/img/sg' + feature.properties.icon_subgroup + '.png',
 	    iconSize: [feature.properties.icon_w, feature.properties.icon_h],
         iconAnchor: [feature.properties.icon_w/ 2, feature.properties.icon_h / 2], // xxx - halvparten av iconsize for å sikre at ikonet plasserast rett over punkt
         popupAnchor: [0, -32] //
@@ -793,7 +793,7 @@ var finish_area_poi = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: 'ontour/resources/img/sg' + feature.properties.icon_subgroup + '.png',
+        iconUrl: 'resources/img/sg' + feature.properties.icon_subgroup + '.png',
         iconSize: [feature.properties.icon_w, feature.properties.icon_h],
          iconAnchor: [feature.properties.icon_w/ 2, feature.properties.icon_h / 2], // xxx - halvparten av iconsize for å sikre at ikonet plasserast rett over punkt
         popupAnchor: [0, -32] //
@@ -871,7 +871,7 @@ var start_area_poi = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-         iconUrl: 'ontour/resources/img/sg' + feature.properties.icon_subgroup + '.png',
+         iconUrl: 'resources/img/sg' + feature.properties.icon_subgroup + '.png',
 	    iconSize: [feature.properties.icon_w, feature.properties.icon_h],
         iconAnchor: [feature.properties.icon_w/ 2, feature.properties.icon_h / 2], // xxx - halvparten av iconsize for å sikre at ikonet plasserast rett over punkt
         popupAnchor: [0, -32] //
@@ -949,7 +949,7 @@ var support_poi = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: 'ontour/resources/img/sg' + feature.properties.icon_subgroup + '.png',
+        iconUrl: 'resources/img/sg' + feature.properties.icon_subgroup + '.png',
 	    iconSize: [feature.properties.icon_w, feature.properties.icon_h],
         iconAnchor: [feature.properties.icon_w/ 2, feature.properties.icon_h / 2],
         popupAnchor: [0, -36]
@@ -1036,7 +1036,7 @@ var d3_poi = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-         iconUrl: 'ontour/resources/img/sg' + feature.properties.icon_subgroup + '.png',
+         iconUrl: 'resources/img/sg' + feature.properties.icon_subgroup + '.png',
 	    iconSize: [feature.properties.icon_w, feature.properties.icon_h],
          iconAnchor: [feature.properties.icon_w/ 2, feature.properties.icon_h / 2], // xxx - halvparten av iconsize for å sikre at ikonet plasserast rett over punkt
         popupAnchor: [0, -32] //
@@ -1085,7 +1085,7 @@ var dangers_poi = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-         iconUrl: 'ontour/resources/img/sg' + feature.properties.icon_subgroup + '.png',
+         iconUrl: 'resources/img/sg' + feature.properties.icon_subgroup + '.png',
 	    iconSize: [feature.properties.icon_w, feature.properties.icon_h],
         iconAnchor: [feature.properties.icon_w/ 2, feature.properties.icon_h / 2],// xxx - halvparten av iconsize for å sikre at ikonet plasserast rett over punkt
         popupAnchor: [0, -32] //
@@ -1379,12 +1379,12 @@ var baseLayers = {
 
 var groupedOverlays = {
   "POI": {
-  "<img src='ontour/resources/img/g1_course.png' width='32' height='32'>": course_poiLayer,
-	"<img src='ontour/resources/img/g2_start_area.png' width='32' height='32'>": start_area_poiLayer,
-	"<img src='ontour/resources/img/g3_support.png' width='32' height='32'>": support_poiLayer,
-	"<img src='ontour/resources/img/g4_dangers.png' width='32' height='32'>": dangers_poiLayer,
-	"<img src='ontour/resources/img/g5_finish_area.png' width='32' height='32'>": finish_area_poiLayer,
-	"<img src='ontour/resources/img/g6_d3.png' width='32' height='32'>": d3_poiLayer,
+  "<img src='resources/img/g1_course.png' width='32' height='32'>": course_poiLayer,
+	"<img src='resources/img/g2_start_area.png' width='32' height='32'>": start_area_poiLayer,
+	"<img src='resources/img/g3_support.png' width='32' height='32'>": support_poiLayer,
+	"<img src='resources/img/g4_dangers.png' width='32' height='32'>": dangers_poiLayer,
+	"<img src='resources/img/g5_finish_area.png' width='32' height='32'>": finish_area_poiLayer,
+	"<img src='resources/img/g6_d3.png' width='32' height='32'>": d3_poiLayer,
 	},
 
   "Map": {
@@ -1539,7 +1539,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: course_poiBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='ontour/resources/img/g1_course.png' width='24' height='24'></h4>",
+      header: "<h4 class='typeahead-header'><img src='resources/img/g1_course.png' width='24' height='24'></h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;"].join(""))
     }
   },
@@ -1549,7 +1549,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: start_area_poiBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='ontour/resources/img/g2_start_area.png' width='24' height='24'></h4>",
+      header: "<h4 class='typeahead-header'><img src='resources/img/g2_start_area.png' width='24' height='24'></h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;"].join(""))
     }
   },
@@ -1558,7 +1558,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: support_poiBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='ontour/resources/img/g3_support.png' width='24' height='24'></h4>",
+      header: "<h4 class='typeahead-header'><img src='resources/img/g3_support.png' width='24' height='24'></h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;"].join(""))
     }
   },
@@ -1568,7 +1568,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: finish_area_poiBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='ontour/resources/img/g5_finish_area.png' width='24' height='24'></h4>",
+      header: "<h4 class='typeahead-header'><img src='resources/img/g5_finish_area.png' width='24' height='24'></h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;"].join(""))
     }
   },
@@ -1577,7 +1577,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: d3_poiBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='ontour/resources/img/g6_d3.png' width='24' height='24'></h4>",
+      header: "<h4 class='typeahead-header'><img src='resources/img/g6_d3.png' width='24' height='24'></h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;"].join(""))
     }
   },
@@ -1586,7 +1586,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: dangers_poiBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='ontour/resources/img/g4_dangers.png' width='24' height='24'></h4>",
+      header: "<h4 class='typeahead-header'><img src='resources/img/g4_dangers.png' width='24' height='24'></h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;"].join(""))
     }
   },
@@ -1595,7 +1595,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: geonamesBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='ontour/resources/img/globe.png' width='25' height='24'>&nbsp;GeoNames</h4>"
+      header: "<h4 class='typeahead-header'><img src='resources/img/globe.png' width='25' height='24'>&nbsp;GeoNames</h4>"
     }
   }).on("typeahead:selected", function (obj, datum) {
     if (datum.source === "area_polygon") {
