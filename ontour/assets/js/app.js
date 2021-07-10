@@ -949,10 +949,10 @@ var support_poi = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: 'resources/img/sg' + feature.properties.icon_subgroup + '.png',
-	    iconSize: [feature.properties.icon_w, feature.properties.icon_h],
-        iconAnchor: [feature.properties.icon_w/ 2, feature.properties.icon_h / 2],
-        popupAnchor: [0, -36]
+        iconUrl: "resources/img/k_markers.png",
+        iconSize: [25, 25],
+        iconAnchor: [12, 12], // xxx - halvparten av iconsize for å sikre at ikonet plasserast rett over punkt
+        popupAnchor: [0, 0] //
       }),
      rotationAngle: feature.properties.icon_r,
 	  title: feature.properties.keyword_search,
