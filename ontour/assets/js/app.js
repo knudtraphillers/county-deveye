@@ -142,7 +142,7 @@ function syncSidebar() {
   /* Loop through support_poi layer and add only features which are in the map bounds */
   support_poi.eachLayer(function (layer) {
     if (map.hasLayer(support_poiLayer)) {
-      // if (map.getBounds().contains(layer.getLatLng()))
+      if (map.getBounds().contains(layer.getLatLng())) // kva gjer denne?
 	  {
         $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
