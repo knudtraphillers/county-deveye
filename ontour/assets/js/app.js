@@ -1381,7 +1381,7 @@ var groupedOverlays = {
   "POI": {
   "<img src='resources/img/g1_course.png' width='32' height='32'>": course_poiLayer,
 	"<img src='resources/img/g2_start_area.png' width='32' height='32'>": start_area_poiLayer,
-	"<img src='resources/img/g3_support.png' width='32' height='32'>": support_poiLayer,
+	"<img src='resources/img/norway.png' width='32' height='32'>": support_poiLayer,
 	"<img src='resources/img/g4_dangers.png' width='32' height='32'>": dangers_poiLayer,
 	"<img src='resources/img/g5_finish_area.png' width='32' height='32'>": finish_area_poiLayer,
 	"<img src='resources/img/g6_d3.png' width='32' height='32'>": d3_poiLayer,
