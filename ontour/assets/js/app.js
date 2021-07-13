@@ -1558,7 +1558,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: support_poiBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='resources/img/g3_support.png' width='24' height='24'></h4>",
+      header: "<h4 class='typeahead-header'><img src='resources/img/norway.png' width='24' height='24'></h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;"].join(""))
     }
   },
