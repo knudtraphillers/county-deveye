@@ -117,7 +117,7 @@ function clearHighlight() {
 function sidebarClick(id) {
   var layer = markerClusters.getLayer(id);
   map.setView([layer.getLatLng().lat, layer.getLatLng().lng], layer.feature.properties.zoom); //her kontrollerer du zoom-nivå ved klikk på objekt i sidebar
-  // layer.fire("click"); // skru denne på viss du vil opne dialogen når du klikker, eller om du berre vil zoome til POI
+  layer.fire("click"); // skru denne på viss du vil opne dialogen når du klikker, eller om du berre vil zoome til POI
   /* Hide sidebar and go to the map on small screens */
   if (document.body.clientWidth <= 767) {
     $("#sidebar").hide();
@@ -262,7 +262,7 @@ var Stamen_Watercolor = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/wa
   attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   subdomains: 'abcd',
   minZoom: 5,
-  maxZoom: 14,
+  maxZoom: 16,
   ext: 'png'
 });
 
@@ -708,7 +708,7 @@ var markerClusters = new L.MarkerClusterGroup({
   spiderfyOnMaxZoom: true,
   showCoverageOnHover: true, // xxx - markering av omsluttende polygon for dei punktene som ligg i ein cluster
   zoomToBoundsOnClick: true,
-  disableClusteringAtZoom: 16 // xxx - her definerer du målestokk for der clustering skal deaktiverast
+  disableClusteringAtZoom: 13 // xxx - her definerer du målestokk for der clustering skal deaktiverast
 });
 
 /* Empty layer placeholder to add to layer control for listening when to add/remove stigning to markerClusters layer */
