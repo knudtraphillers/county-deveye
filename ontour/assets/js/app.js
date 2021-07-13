@@ -132,7 +132,7 @@ function syncSidebar() {
   /* Loop through course_poi layer and add only features which are in the map bounds */
   course_poi.eachLayer(function (layer) {
     if (map.hasLayer(course_poiLayer)) {
-      // if (map.getBounds().contains(layer.getLatLng()))  /* XXX - denne gjer at berre dei som er innafor kartområdet vert med i lista
+   if (map.getBounds().contains(layer.getLatLng()))  //* XXX - denne gjer at berre dei som er innafor kartområdet vert med i lista
 		  {
         $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' +
 		layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
