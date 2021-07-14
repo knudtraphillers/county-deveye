@@ -142,7 +142,7 @@ function syncSidebar() {
   /* Loop through support_poi layer and add only features which are in the map bounds */
   support_poi.eachLayer(function (layer) {
     if (map.hasLayer(support_poiLayer)) {
-      if (map.getBounds().contains(layer.getLatLng())) // kva gjer denne?
+      if (map.getBounds().contains(layer.getLatLng()))
 	  {
         $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
@@ -151,7 +151,7 @@ function syncSidebar() {
   /* Loop through start_area_poi layer and add only features which are in the map bounds */
   start_area_poi.eachLayer(function (layer) {
     if (map.hasLayer(start_area_poiLayer)) {
-      // if (map.getBounds().contains(layer.getLatLng()))
+      if (map.getBounds().contains(layer.getLatLng()))
 	  {
         $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
@@ -160,7 +160,7 @@ function syncSidebar() {
     /* Loop through finish_area_poi layer and add only features which are in the map bounds */
    finish_area_poi.eachLayer(function (layer) {
     if (map.hasLayer(finish_area_poiLayer)) {
-      // if (map.getBounds().contains(layer.getLatLng()))
+      if (map.getBounds().contains(layer.getLatLng()))
 	  {
         $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
@@ -169,7 +169,7 @@ function syncSidebar() {
      /* Loop through d3_poi layer and add only features which are in the map bounds */
    d3_poi.eachLayer(function (layer) {
     if (map.hasLayer(d3_poiLayer)) {
-      // if (map.getBounds().contains(layer.getLatLng()))
+    if (map.getBounds().contains(layer.getLatLng()))
 	  {
         $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
@@ -178,7 +178,7 @@ function syncSidebar() {
     /* Loop through dangers_poi layer and add only features which are in the map bounds */
    dangers_poi.eachLayer(function (layer) {
     if (map.hasLayer(dangers_poiLayer)) {
-      // if (map.getBounds().contains(layer.getLatLng()))
+    if (map.getBounds().contains(layer.getLatLng()))
 	  {
         $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
@@ -949,7 +949,7 @@ var support_poi = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: "resources/img/k_markers.png",
+        iconUrl: "resources/img/norway.png",
         iconSize: [25, 25],
         iconAnchor: [12, 12], // xxx - halvparten av iconsize for å sikre at ikonet plasserast rett over punkt
         popupAnchor: [0, 0] //
@@ -976,7 +976,7 @@ var support_poi = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/g4_dangers.png"></td><td class="feature-name">' + layer.feature.properties.name + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/norway.png"></td><td class="feature-name">' + layer.feature.properties.name + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       support_poiSearch.push({
         name: layer.feature.properties.keyword_search,
         source: "support_poi",
@@ -1000,7 +1000,7 @@ var support_poi = L.geoJson(null, {
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
         }
       });
-      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/g4_dangers.png"></td><td class="feature-name">' + layer.feature.properties.name + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+      $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/norway.png"></td><td class="feature-name">' + layer.feature.properties.name + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       support_poiSearch.push({
         name: layer.feature.properties.keyword_search,
         source: "support_poi",
