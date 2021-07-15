@@ -144,7 +144,7 @@ function syncSidebar() {
     if (map.hasLayer(support_poiLayer)) {
       if (map.getBounds().contains(layer.getLatLng()))
 	  {
-        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/sg' + layer.feature.properties.icon_subgroup + '.png"></td><td class="feature-name">' + layer.feature.properties.keyword_search + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
+        $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/norway.png"></td><td class="feature-name">' + layer.feature.properties.name+ '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       }
     }
   });
@@ -962,12 +962,8 @@ var support_poi = L.geoJson(null, {
   onEachFeature: function (feature, layer) {
     if (feature.properties.text_link) {
     var content = "<table class='table table-striped table-bordered table-condensed'>" +
-	  	  	"<tr><th>Name</th><td>" + feature.properties.keyword_search + "</td></tr>" + "</td></tr>"+
-		"<tr><th>Link</th><td><a class='url-break' href='" + feature.properties.text_link + "' target='_blank'>The www</a></td></tr>"
-  + '<br>' + "<table>" +
-	  '<br>'+ feature.properties.picture_link
-
-	  ;
+	  	  	"<tr><th>Name</th><td>" + feature.properties.name + "</td></tr>" + "</td></tr>"+
+		"<tr><th>Link</th>;
       layer.on({
         click: function (e) {
           $("#feature-title").html(feature.properties.keyword_search);
