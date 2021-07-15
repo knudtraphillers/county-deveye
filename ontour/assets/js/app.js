@@ -963,7 +963,7 @@ var support_poi = L.geoJson(null, {
     if (feature.properties.text_link) {
     var content = "<table class='table table-striped table-bordered table-condensed'>" +
 	  	  	"<tr><th>Name</th><td>" + feature.properties.name + "</td></tr>" + "</td></tr>"+
-		"<tr><th>Link</th>;
+		"<tr>;
       layer.on({
         click: function (e) {
           $("#feature-title").html(feature.properties.keyword_search);
@@ -974,7 +974,7 @@ var support_poi = L.geoJson(null, {
       });
       $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/norway.png"></td><td class="feature-name">' + layer.feature.properties.name + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       support_poiSearch.push({
-        name: layer.feature.properties.keyword_search,
+        name: layer.feature.properties.name,
         source: "support_poi",
         id: L.stamp(layer),
         lat: layer.feature.geometry.coordinates[1],
