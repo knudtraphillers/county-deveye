@@ -962,8 +962,7 @@ var support_poi = L.geoJson(null, {
   onEachFeature: function (feature, layer) {
     if (feature.properties.text_link) {
     var content = "<table class='table table-striped table-bordered table-condensed'>" +
-	  	  	"<tr><th>Name</th><td>" + feature.properties.name + "</td></tr>" + "</td></tr>"+
-		"<tr>;
+	  	  	"<tr><th>Name</th><td>" + feature.properties.name + "</td></tr>" + "</td></tr>";
       layer.on({
         click: function (e) {
           $("#feature-title").html(feature.properties.keyword_search);
