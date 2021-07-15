@@ -942,6 +942,7 @@ $.getJSON("resources/data/start_area_poi.json", function (data) {
   map.addLayer(start_area_poiLayer);
 });
 
+//********************************
 
 /* Empty layer placeholder to add to layer control for listening when to add/remove top to markerClusters layer */
 var support_poiLayer = L.geoJson(null);
@@ -982,9 +983,9 @@ var support_poi = L.geoJson(null, {
     }
 	else   if (feature.properties) {
     var content = "<table class='table table-striped table-bordered table-condensed'>" +
-	  	  	"<tr><th>Name</th><td>" + feature.properties.keyword_search + "</td></tr>"
+	  	  	"<tr><th>Name</th><td>" + feature.properties.name + "</td></tr>"
 				    + '<br>' + "<table>" +
-	  '<br>'+ feature.properties.picture_link
+	  '<br>'
 
 	  ;
       layer.on({
