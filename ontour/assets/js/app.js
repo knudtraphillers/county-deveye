@@ -963,10 +963,10 @@ var support_poi = L.geoJson(null, {
   onEachFeature: function (feature, layer) {
     if (feature.properties.text_link) {
     var content = "<table class='table table-striped table-bordered table-condensed'>" +
-	  	  	"<tr><th>Name</th><td>" + feature.properties.name + "</td></tr>" + "</td></tr>";
+	  	  	"<tr><th>Info</th><td>" + feature.properties.name + "</td></tr>" + "</td></tr>";
       layer.on({
         click: function (e) {
-          $("#feature-title").html(feature.properties.keyword_search);
+          //$("#feature-title").html(feature.properties.keyword_search);
           $("#feature-info").html(content);
           $("#featureModal").modal("show");
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
