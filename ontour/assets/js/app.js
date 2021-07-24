@@ -956,7 +956,7 @@ var support_poi = L.geoJson(null, {
         popupAnchor: [0, 0] //
       }),
      rotationAngle: feature.properties.icon_r,
-	  title: feature.properties.keyword_search,
+	  //title: feature.properties.keyword_search,
       riseOnHover: true
     });
   },
