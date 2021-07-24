@@ -983,7 +983,7 @@ var support_poi = L.geoJson(null, {
     }
 	else   if (feature.properties) {
     var content = "<table class='table table-striped table-bordered table-condensed'>" +
-	  	  	"<tr><th>Name</th><td>" + feature.properties.name + "</td></tr>"
+	  	  	"<tr><th>Info</th><td>" + feature.properties.name + "</td></tr>"
 				    + '<br>' + "<table>" +
 	  '<br>'
 
