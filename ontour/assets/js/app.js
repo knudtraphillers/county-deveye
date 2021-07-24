@@ -990,7 +990,7 @@ var support_poi = L.geoJson(null, {
 	  ;
       layer.on({
         click: function (e) {
-          $("#feature-title").html(feature.properties.keyword_search);
+          //$("#feature-title").html(feature.properties.keyword_search);
           $("#feature-info").html(content);
           $("#featureModal").modal("show");
           highlight.clearLayers().addLayer(L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], highlightStyle));
@@ -998,7 +998,7 @@ var support_poi = L.geoJson(null, {
       });
       $("#feature-list tbody").append('<tr class="feature-row" id="' + L.stamp(layer) + '" lat="' + layer.getLatLng().lat + '" lng="' + layer.getLatLng().lng + '"><td style="vertical-align: middle;"><img width="24" height="24" src="resources/img/norway.png"></td><td class="feature-name">' + layer.feature.properties.name + '</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right"></i></td></tr>');
       support_poiSearch.push({
-        name: layer.feature.properties.keyword_search,
+        name: layer.feature.properties.name,
         source: "support_poi",
         id: L.stamp(layer),
         lat: layer.feature.geometry.coordinates[1],
